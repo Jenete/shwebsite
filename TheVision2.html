@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <title>Document</title>
+    <style>
+    body {
+    background: rgb(99, 39, 120);
+    transition: 0.6s ease-in-out;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+        
+    }
+    .form-control:focus {
+        box-shadow: none;
+        border-color: #BA68C8
+    } 
+    b{
+        position: absolute;
+        left: 0px;
+        margin-right: 2rem;
+    }
+    .profile-button {
+        background: rgb(99, 39, 120);
+        box-shadow: none;
+        border: none
+    }
+    div{
+        justify-content: space-between;
+    }
+
+    .profile-button:hover {
+        background: #682773
+    }
+
+    .profile-button:focus {
+        background: #682773;
+        box-shadow: none
+    }
+
+    .profile-button:active {
+        background: #682773;
+        box-shadow: none
+    }
+
+    .back:hover {
+        color: #682773;
+        cursor: pointer
+    }
+
+    .labels {
+        font-size: 11px
+    }
+
+    .add-experience:hover {
+        background: #BA68C8;
+        color: #fff;
+        cursor: pointer;
+        border: solid 1px #BA68C8
+    }
+    .proof-form{
+        background: #e6c0ec;
+        color: rgb(41, 40, 40);
+        cursor: pointer;
+        border: 3px #a993ad outset;
+        padding: 1rem;
+    }
+    .proof-form input{
+        background: #e6c0ec;
+        color: rgb(24, 23, 23);
+        cursor: pointer;
+        border: solid 1px #BA68C8;
+        margin: .2rem;
+    }
+    .card .card-img-top{
+        width: 90%;
+        height: 15rem;
+        margin: 1rem;
+        float: bottom;
+        
+    }
+    .card .card-title{
+        font-size: 3rem;
+        color: rgb(219, 46, 46);
+        font-family: 'Times New Roman', Times, serif;
+        text-shadow: -1px 1px 1px rgba(255, 61, 61, 0.63);
+        box-shadow: -3px 2px 2px grey;
+        padding: 1rem;
+        margin: 2rem;
+    }
+    .card .card-title small{
+        font-size: 2rem;
+        font-style: oblique;
+        color: rgb(236, 67, 67);
+    }
+    #message{
+        margin: 2rem;
+        margin-bottom: 20rem;
+        margin-top: 5rem;  
+    }
+    .form-inline{
+        margin-bottom: 15rem;
+        padding: 1rem;
+    }
+    
+    </style>
+</head>
+<body>
+    
+    <div id="message">
+        <div >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Send us a message</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Select message type</label>
+                    <select class="form-control" id="recipient-name">
+                        <option selected>I want to ...</option>
+                        <option>I have a compaint</option>
+                        <option>I want to claim</option>
+                        <option>I want to report stuff member</option>
+                        <option>I want to report branch</option>
+                        <option>Other</option>
+                    </select>
+                    <audio>Audio</audio>
+                    </div>
+                    <div class="form-group">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text" placeholder="Type your message here"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Send message</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal"><a href="#profile">Close</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <form class="form-inline" id="login">
+        <div class="card" style="width: 95%;margin: auto; margin-top: 3rem;">
+            <h1 class="card-title">Luvuyo Society<sub><small>In god we trust</small></sub></h1>
+            <img  class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpN-WBdqaUgSBfGC4rKGnjsbqRVpVMc1KiVQ&usqp=CAU" alt="Announcements will appear here">
+            <div class="alert alert-light" role="alert">
+                <h6 style="box-shadow: -3px 2px 2px grey;padding: 1rem;">Please note that due to lock-down the branch at Makhaza is closed and will reopen on the third of July</h6>
+              </div>
+            <div class="card-body">
+                <h4>Login page</h4>
+                <div class="col-md-3 mb-3">
+                <label for="validationServer04">ID number</label>
+                <input type="number" class="form-control is-invalid" id="validationServer04" placeholder="Enter your ID number" required>
+                <div class="invalid-feedback" hidden>
+                  Please provide a valid ID number.
+                </div>
+              </div>
+            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+              <input type="checkbox" class="custom-control-input" id="customControlInline">
+              <label class="custom-control-label" for="customControlInline">Remember my ID</label>
+            </div>
+            <button type="submit" class="btn btn-primary my-1"><a href="#profile">Sign in</a></button>
+            <div>Not a member? <a href="./TheVision.html" style="color: blue;text-decoration:underline">Click here to register</a></div>
+            </div>
+        </div>
+      </form>
+    <div>
+        <div  id="profile" class="container mt-4 mb-4 p-3 d-flex justify-content-center"> <div class="card p-4"> 
+            <div class=" image d-flex flex-column justify-content-center align-items-center">
+                 <button class="btn btn-secondary">
+                    <img src="./IDuse.jpg" height="100" width="100" />
+                </button> 
+                <div class="name mt-3"><b>ID number:</b> 871023*******08</div>
+                <div class="name"><b>Client:</b> Lukhaya Jenete</div>
+                <div class="idd"><b>Funeral cover:</b>  Premium plan</div>
+             <div class="d-flex flex-row justify-content-center align-items-center gap-2">
+            <div class="idd1"><b>Eligible to claim:</b> <u> No </u></div>   
+        </div>
+        <div><b>Payment method:</b><b></b>   Monthly</div>
+        <div><b>Payment amount:</b>   R400</div>
+         <span class="number"><b>No. of beneficiaries:</b> <span class="follow">  7 registered</span></span>
+         <br/>
+         <div>Next payment due date: 30 July 2022</div>   
+        <br/>
+         <div class=" d-flex mt-2">
+         
+        <button class="btn1 btn-dark m-1"><a href="#settings">Edit Profile</a></button>
+        <button class="btn1 btn-dark m-1"><a href="#message">Send message</a></button>
+        <button type="button" class="btn btn-danger m-1"><a href="#login">Log out</a></button>
+    </div> <div class="text mt-3"> 
+    <form class="proof-form">
+        <h3>Upload documents</h3>
+        <div><i> Made payment? Upload proof here: </i><input type="file"></div>
+        <div>Month:<input type="month"> <button >Submit</button></div>
+    </form>
+    
+    </div> 
+    <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span><i class="fa fa-twitter"></i></span>
+        
+<div class=" px-2 rounded mt-4 date "> <span class="join">You Joined May,2021</span> </div> </div> </div>
+    </div>
+    </div>
+    <div class="container rounded bg-white mt-5 mb-5" id="settings">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <img class="rounded-circle mt-5" width="150px" src="./IDuse.jpg">
+                    <span class="font-weight-bold">Lukhaya Jenete</span><span class="text-black-50">lukhayajenete@mail.com.my</span><span> </span></div>
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profile Settings</h4>
+                    </div>
+                    <fieldset disabled>
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">ID number</label><input type="text" class="form-control" placeholder="9654056786088" value=""></div>
+                        <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="Lukhaya" value=""></div>
+                        <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="Jenete"></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value="0735534588"></div>
+                        <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
+                        <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                        <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                        <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                        <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                        <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
+                        <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
+                        <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
+                    </div>
+                </fieldset>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"><a href="#profile">Save Profile</a></button></div>
+                
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center experience"><span>Edit plan</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Edit</span></div><br>
+                    <div class="col-md-12"><label class="labels">Plan name</label><input type="text" class="form-control" placeholder="Enter plan" value="Funeral Plan"></div> <br>
+                    <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value="Monthly payments of R270"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script type="module" src="./firebase.js"></script>
+    </body>
+    
+</html>
